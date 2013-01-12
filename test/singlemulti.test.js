@@ -38,3 +38,23 @@ test("prob arys", function (t) {
   t.deepEqual([], resZero, "choose none from multiple when prob === 0");
   t.end();
 });
+
+test("range", function (t) {
+  for (var i = 0; i < 30; i += 1) {
+    t.ok([1,2,3,4,5,6].indexOf(trials.range(1, 6)) >= 0, "range1-6 produces one of");
+    t.ok([1,2,3,4,5,6].indexOf(trials.single([1,2,3,4,5,6])) >= 0, "ditto single");
+  }
+  t.end();
+});
+
+test("cluster", function (t) {
+  for (var i = 0; i < 30; i += 1) {
+    t.deepEqual(trials.cluster([1,2,3,4], 4, 0), [], 'cluster with zero p');
+    t.ok(trials.cluster([1,2,3,4], 4, 1).length > 0, 'cluster with one p');
+
+    var normal = trials.cluster([1,2,3,4], 3, 0.5);
+    t.ok(normal.length >= 0, "normal cluster can be zero");
+    t.ok(normal.length <= 3, "but is always less than the specified max");
+  }
+  t.end();
+});

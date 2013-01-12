@@ -42,13 +42,13 @@ Takes an object of form `key` : `probability` (which acts as the probability mas
 An important thing to note with this function is that the values of the object **must sum to 1** for it to represent a proper mass function (and to guarantee a return value).
 
 ### single(ary)
-Takes an Array and picks exactly one element from the array randomly.
+Takes an Array and picks exactly one element from the array with uniform probability.
 
 ```js
 for (var i = 0; i < 5; i += 1) t.single(['hi', 'thar', 'miss']);
 ```
 
-Typical output:
+Example output:
 
 ```bash
 hi
@@ -71,7 +71,7 @@ for (var i = 0; i < 5; i += 1) {
 }
 ```
 
-Typical output:
+Example output:
 
 ```bash
 [ 'b' ]
@@ -81,14 +81,14 @@ Typical output:
 [ 'a', 'b' ]
 ```
 
-### multiple(ary)
-Takes an array and a fixed probability, does one Bernoulli trial for each element in the array, and collects all the successes.
+### multiple(ary, p)
+Takes an array and a fixed probability, does one Bernoulli trial for each element in the array with the defined uniform probability, and collects all the successes.
 
 ```js
 for (var i = 0; i < 5; i += 1) t.multiple(['a', 'b', 'c'], 0.4);
 ```
 
-Typical output:
+Example output:
 
 ```bash
 [ 'a' ]
@@ -99,8 +99,28 @@ Typical output:
 ```
 
 ### range(start, end)
-Gets an integer in the range `start` to (and including) `end`.
+Gets an integer in the range `start` to (and including) `end` with uniform probability.
 Equivalent to `single` on the array `[start, start+1, ... , end]`, but more efficient.
+
+### cluster(ary, max, p)
+Cluster picks {1, 2, ..., max} elements uniformly (with equal probability) from the array with probability p, or it picks none at all with probability 1-p.
+
+This is essentially a uniform distribution within a uniform distribution.
+
+```js
+for (var i = 0; i < 5; i += 1) t.cluster([1, 2, 3, 4, 5], 3, 0.6);
+```
+
+Example output:
+
+```bash
+[ 2, 1 ]
+[ 4, 1, 5 ]
+[ 1 ]
+[]
+[ 3, 1, 4 ]
+[ 2 ]
+```
 
 ## Installation
 
