@@ -48,7 +48,7 @@ exports.multipleProbs = function (multi) {
 // picks one out of {start, start+1, ... , end}
 // equivalent to `single` on [start, star+1, ..., end]
 exports.range = function (start, end) {
-  return Math.floor(Math.random() * (end + 1 - start)) + start
+  return Math.floor(Math.random() * (end + 1 - start)) + start;
 };
 
 
