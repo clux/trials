@@ -55,6 +55,7 @@ test("cluster", function (t) {
     var normal = trials.cluster([1,2,3,4], 3, 0.5);
     t.ok(normal.length >= 0, "normal cluster can be zero");
     t.ok(normal.length <= 3, "but is always less than the specified max");
+    t.ok(!trials.cluster([1,2,3], 0, 0.5).length, "!max => [] res cluster");
   }
   t.end();
 });

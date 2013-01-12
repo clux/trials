@@ -60,7 +60,7 @@ var shuffler = function () {
 // pick {1, ..., max-1} elements uniformly from ary with probability p
 // or pick none at all, with probability 1-p
 t.cluster = function (ary, max, p) {
-  if (bernoulli(p)) {
+  if (max > 0 && bernoulli(p)) {
     var numPicks = range(1, Math.min(max, ary.length));
     return ary.slice().sort(shuffler).slice(0, numPicks);
   }
