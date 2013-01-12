@@ -103,9 +103,9 @@ Gets an integer in the range `start` to (and including) `end` with uniform proba
 Equivalent to `single` on the array `[start, start+1, ... , end]`, but more efficient.
 
 ### cluster(ary, max, p)
-Cluster picks {1, 2, ..., max} elements uniformly (with equal probability) from the array with probability p, or it picks none at all with probability 1-p.
+Cluster picks {1, 2, ..., max} elements uniformly from the array with probability `p`, or it picks none at all with probability `1-p`.
 
-This is essentially a uniform distribution within a uniform distribution.
+This is essentially a uniform distribution within a uniform distribution. It's uniform in that we either pick or don't pick with probability `p`, and if we pick, then how many we pick is uniformly distributed in the defined range. This creates the clusters, rather than true randomness.
 
 ```js
 for (var i = 0; i < 5; i += 1) t.cluster([1, 2, 3, 4, 5], 3, 0.6);
