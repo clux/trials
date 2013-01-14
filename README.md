@@ -98,6 +98,8 @@ Example output:
 [ 'b' ]
 ```
 
+By virtue of being repeated, independent Bernoulli trials with constant probability; the number of picks from the array follows a Binomial distribution `B(ary.length, p)`.
+
 ### range(start, end)
 Gets an integer in the range `start` to (and including) `end` with uniform probability.
 Equivalent to `single` on the array `[start, start+1, ... , end]`, but more efficient.
