@@ -1,4 +1,4 @@
-# Trials [![Build Status](https://secure.travis-ci.org/clux/trials.png)](http://travis-ci.org/clux/trials)
+# Trials [![Build Status](https://secure.travis-ci.org/clux/trials.png)](http://travis-ci.org/clux/trials) [![Dependency Status](https://david-dm.org/clux/trials.png)](https://david-dm.org/clux/trials)
 
 Trials is a small library for generating outcomes conforming to simple statistical rules by running repeated trials in these systems.
 
