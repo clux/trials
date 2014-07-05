@@ -1,3 +1,7 @@
+0.1.3 / 2014-07-05
+==================
+  * Using a correct internal shuffler - fixes #1
+
 0.1.2 / 2013-01-12
 ==================
   * `cluster` now correctly returns `[]` if `max === 0` :x
