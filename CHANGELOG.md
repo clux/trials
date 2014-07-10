@@ -1,3 +1,7 @@
+0.1.3 / 2013-07-10
+==================
+  * Better documentation and coverage
+
 0.1.2 / 2013-01-12
 ==================
   * `cluster` now correctly returns `[]` if `max === 0` :x
