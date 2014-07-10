@@ -2,13 +2,17 @@
   "name": "trials",
   "description": "Statistical trials to generate simple outcomes",
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "stability": "stable",
   "repository": {
     "type": "git",
     "url": "clux/trials"
   },
-  "keywords": ["probability", "bernoulli", "binomial"],
+  "keywords": [
+    "probability",
+    "bernoulli",
+    "binomial"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "$(npm bin)/nodeunit --reporter=verbose test/*.js",
@@ -20,7 +24,7 @@
     "jscoverage": "~0.5.4",
     "coveralls": "~2.11.1",
     "operators": "latest"
-    },
+  },
   "bugs": {
     "url": "http://github.com/clux/trials/issues"
   },
