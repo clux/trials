@@ -13,10 +13,11 @@
     "bernoulli",
     "binomial"
   ],
-  "main": "index.js",
+  "main": "trials.js",
   "scripts": {
-    "test": "$(npm bin)/nodeunit --reporter=verbose test/*.js",
-    "coveralls": "$(npm bin)/jscoverage lib && TRIALS_COV=1 $(npm bin)/nodeunit --reporter=lcov test | $(npm bin)/coveralls"
+    "test": "nodeunit --reporter=verbose test/*.js",
+    "coverage": "jscoverage trials.js && TRIALS_COV=1 nodeunit --reporter=lcov test",
+    "coveralls": "npm run coverage | coveralls"
   },
   "dependencies": {},
   "devDependencies": {

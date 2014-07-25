@@ -1,4 +1,4 @@
-var trials = require('../');
+var trials = require(process.env.TRIALS_COV ? '../trials-cov.js' : '../');
 
 exports.noopAry = function (t) {
   var res = trials.single([]);
