@@ -3,7 +3,6 @@
 [![build status](https://secure.travis-ci.org/clux/trials.svg)](http://travis-ci.org/clux/trials)
 [![dependency status](https://david-dm.org/clux/trials.svg)](https://david-dm.org/clux/trials)
 [![coverage status](http://img.shields.io/coveralls/clux/trials.svg)](https://coveralls.io/r/clux/trials)
-[![stable](http://img.shields.io/badge/stability-stable-74C614.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
 Trials is a small library for generating outcomes conforming to simple statistical rules by running repeated trials in these systems.
 
@@ -133,19 +132,6 @@ Example output:
 
 ```bash
 $ npm install trials
-```
-
-## Running tests
-Install development dependencies
-
-```bash
-$ npm install
-```
-
-Run the tests
-
-```bash
-$ npm test
 ```
 
 ## License

@@ -3,7 +3,6 @@
   "description": "Statistical trials to generate simple outcomes",
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
   "version": "0.1.4",
-  "stability": "stable",
   "repository": {
     "type": "git",
     "url": "clux/trials"

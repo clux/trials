@@ -1,4 +1,4 @@
-0.1.5 / 2015-11-14
+1.0.0 / 2015-11-14
 ==================
   * Updated builds for node 4 and added npmignore
 
